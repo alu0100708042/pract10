@@ -28,6 +28,8 @@ class SparseMatrix < Matrix
 				 j += 1		
 			end
 		end
+		row = row + 1
+		col = col + 1 
 		super(row,col)
 	end
 
@@ -64,7 +66,7 @@ class SparseMatrix < Matrix
 
 		for r in @m_Matrix.keys do 
 			for j in @m_Matrix[r].vector.keys do 
-				matrizb[r][j]= self[r][j]+matrizb[r][j]
+				matrizb[r][j]= @m_Matrix[r][j]+matrizb[r][j]
 			end
 		end	
 	matrizb
@@ -72,19 +74,24 @@ class SparseMatrix < Matrix
 
 	# Metodo para la operacion aritmetica de la resta.
 	def -(matrizb)
-		restita={}
+		#restita={}
+		#for r in @m_Matrix.keys do 
+		#	res = {}
+		#	if matrizb.m_Matrix.keys.include? r
+		#		for j in @m_Matrix[r].vector.keys do 
+		#			res[j] = @m_Matrix[r].vector[j]-matrizb[r].vector[j]	
+		#			restita[r] = {j=>res[j]}
+		#		end
+		#	else
+		#		res[r]=@m_Matrix[r]
+		#	end
+		#end
+		#SparseMatrix.new(restita)
 		for r in @m_Matrix.keys do 
-			res = {}
-			if matrizb.m_Matrix.keys.include? r
-				for j in @m_Matrix[r].vector.keys do 
-					res[j] = @m_Matrix[r].vector[j]-matrizb[r].vector[j]	
-					restita[r] = {j=>res[j]}
-				end
-			else
-				res[r]=@m_Matrix[r]
+			for j in @m_Matrix[r].vector.keys do 
+				matrizb[r][j]= @m_Matrix[r][j]-matrizb[r][j]
 			end
 		end
-		SparseMatrix.new(restita)
 	end
 		
 	# Se define un metodo para hallar el máximo que retornará un número
@@ -104,27 +111,33 @@ class SparseMatrix < Matrix
 	end
 	
 	def *(matrixc)
+		if(matrixc.instance_of? DenseMatrix )
+	    		matRes = Array.new(matrixc.matrix.size - 1,0)
+			if (matrixc.row == self.row && matrixc.col == self.col) then
+				
+				for fil in 0...matrixc.matrix[0].size
+				matRes[fil] = Array.new(matrixc.matrix[0].size,0)				
+					for col in 0... self.row do
+						for pos in 0...matrixc.matrix.size
+							prod = self[fil][pos].to_i * matrixc.matrix[pos][col].to_i
+							matRes[fil][col] = matRes[fil][col].to_i + prod
+						end
+					end
+				end
+			return DenseMatrix.new(matRes)		
 
-    	if (matrixc.row == self.row && matrixc.col == self.col) then
+			else 
+				puts "La matriz no es cuadrada no se puede multiplicar" 
+	    		end
+		else
 
-	arr=[]
-	multiplicar={}	
-		for r in @m_Matrix.keys do
-			mult = {}			
-			for j in @m_Matrix[r].vector.keys do 
-			
-					prod = @m_Matrix[r][j].to_i * matrixc.m_Matrix[r][j].to_i
-					mult[j] = mult[j].to_i + prod
-					arr << r
-					arr <<  multiplicar[r] =  {j=>mult[j]}		
-				#puts "#{@m_Matrix[r][pos]} #{matrixc.m_Matrix[pos][j]} #{matRes[r][j]} #{r} #{j}"
-				#end
-			end
+				for r in @m_Matrix.keys do			
+					for j in @m_Matrix[r].vector.keys do 
+							matrixc[r][j]= @m_Matrix[r][j].to_i * matrixc.m_Matrix[r][j].to_i	
+						end
+					end
+
 		end
-	else 
-		puts "La matriz no es cuadrada no se puede multiplicar" 
-    	end
-    arr
     end
     # Se define un metodo para hallar el máximo que retornará un número
 	def min(other)
