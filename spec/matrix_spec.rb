@@ -1,4 +1,3 @@
-
 require "rspec"
 require "sparse_matrix"
 #require "sparse_matrix"
@@ -70,7 +69,7 @@ describe Matrix do
 		
 	end
 	
-	context 'Operaciones con matrices densas y dispersas' do
+	context 'Operaciones entre matrices densas y dispersas' do
 		
 		it "Comprobar la multiplicacion" do
 			(@sm_a * @m_MatrizA).to_s.should == "[[1, 2, 3], [16, 20, 24], [58, 68, 78]]"
