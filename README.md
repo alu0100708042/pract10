@@ -1,4 +1,4 @@
-# Práctica 9 - Matrices dispersas
+# Práctica 10 - Implementación de operaciones entre matrices densas y dispersas para la Gema SparseMatrix.
 
 ## Descripción
 Gema que implementa la clase SparseMatrix que contempla el formato de matriz con más de un 60% de ceros. 
@@ -19,7 +19,7 @@ SparseVector, clase que es usada por SparseMatrix para crear hashes.
 
 Añadir esta línea a el Gemfile de la aplicación:
 
-    gem 'pract09'
+    gem 'SparseMatrix'
 
 Y entonces ejecuta:
 
@@ -27,7 +27,7 @@ Y entonces ejecuta:
 
 O instala tu mismo la gema:
 
-    $ gem install pract09
+    $ gem install SparseMatrix
 
 ## Uso
 
