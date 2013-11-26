@@ -65,9 +65,9 @@ class DenseMatrix < Matrix
 		while x < row
 			while y < col
 				if y == 0
-					sum << [@matrix[x][y] + matrixb[x][y]]
+					sum << [matrix[x][y] + matrixb[x][y]]
 				else
-					sum[x] << @matrix[x][y] + matrixb[x][y]
+					sum[x] << matrix[x][y] + matrixb[x][y]
 				end
 				y= y+1			
 			end

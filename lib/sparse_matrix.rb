@@ -6,7 +6,7 @@ require './dense_matrix.rb'
 class SparseMatrix < Matrix
 
 	attr_reader :m_Matrix
-
+                                                   
 	def initialize(h = {})
 		@m_Matrix = Hash.new({})
 		row, col = 0, 0
@@ -50,20 +50,6 @@ class SparseMatrix < Matrix
 	# Metodo para la operacion aritmetica de la suma.
 	def +(matrizb)
 		
-		#sumita={}
-		#for r in @m_Matrix.keys do 
-		#	sum = {}
-		#	if matrizb.m_Matrix.keys.include? r
-		#		for j in @m_Matrix[r].vector.keys do 
-		#			sum[j] = @m_Matrix[r].vector[j]+matrizb[r].vector[j]	
-		#			sumita[r] = {j=>sum[j]}
-		#		end
-		#	else
-		#		sum[r]=@m_Matrix[r]
-		#	end
-		#end
-		#SparseMatrix.new(sumita)
-
 		for r in @m_Matrix.keys do 
 			for j in @m_Matrix[r].vector.keys do 
 				matrizb[r][j]= @m_Matrix[r][j]+matrizb[r][j]
@@ -74,19 +60,6 @@ class SparseMatrix < Matrix
 
 	# Metodo para la operacion aritmetica de la resta.
 	def -(matrizb)
-		#restita={}
-		#for r in @m_Matrix.keys do 
-		#	res = {}
-		#	if matrizb.m_Matrix.keys.include? r
-		#		for j in @m_Matrix[r].vector.keys do 
-		#			res[j] = @m_Matrix[r].vector[j]-matrizb[r].vector[j]	
-		#			restita[r] = {j=>res[j]}
-		#		end
-		#	else
-		#		res[r]=@m_Matrix[r]
-		#	end
-		#end
-		#SparseMatrix.new(restita)
 		for r in @m_Matrix.keys do 
 			for j in @m_Matrix[r].vector.keys do 
 				matrizb[r][j]= @m_Matrix[r][j]-matrizb[r][j]
@@ -111,34 +84,23 @@ class SparseMatrix < Matrix
 	end
 	
 	def *(matrixc)
-		if(matrixc.instance_of? DenseMatrix )
-	    		matRes = Array.new(matrixc.matrix.size - 1,0)
-			if (matrixc.row == self.row && matrixc.col == self.col) then
+	    	matRes = Array.new(matrixc.row - 1,0)
+		if (matrixc.row == self.row && matrixc.col == self.col) then
 				
-				for fil in 0...matrixc.matrix[0].size
-				matRes[fil] = Array.new(matrixc.matrix[0].size,0)				
-					for col in 0... self.row do
-						for pos in 0...matrixc.matrix.size
-							prod = self[fil][pos].to_i * matrixc.matrix[pos][col].to_i
-							matRes[fil][col] = matRes[fil][col].to_i + prod
-						end
+			for fil in 0...matrixc.row
+			matRes[fil] = Array.new(matrixc.col,0)				
+				for col in 0... self.row do
+					for pos in 0...matrixc.col
+						prod = self[fil][pos].to_i * matrixc[pos][col].to_i
+						matRes[fil][col] = matRes[fil][col].to_i + prod
 					end
 				end
+			end
 			return DenseMatrix.new(matRes)		
 
-			else 
-				puts "La matriz no es cuadrada no se puede multiplicar" 
-	    		end
-		else
-
-				for r in @m_Matrix.keys do			
-					for j in @m_Matrix[r].vector.keys do 
-							matrixc[r][j]= @m_Matrix[r][j].to_i * matrixc.m_Matrix[r][j].to_i	
-						end
-					end
-		matrixc
-
-		end
+		else 
+			puts "La matriz no es cuadrada no se puede multiplicar" 
+	    	end
     end
     # Se define un metodo para hallar el máximo que retornará un número
 	def min(other)
