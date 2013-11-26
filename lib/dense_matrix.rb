@@ -139,4 +139,20 @@ class DenseMatrix < Matrix
 	def [](i)
 		self.matrix[i]
 	end
+
+	def min
+		
+		minimo = 10000
+		i = 0														
+		(self.row).times do
+			j = 0				
+			(self.col).times do
+					minimo = @matrix[i][j] if(self[i][j] < min)	
+				j += 1	
+			end
+			i += 1	
+		end
+		return minimo
+		
+	end
 end

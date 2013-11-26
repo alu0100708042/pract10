@@ -77,6 +77,23 @@ class DenseMatrix < Matrix
 		DenseMatrix.new(sum)
 	end
 	
+	def -(matrixb)
+		res = []
+		x,y =0,0
+		while x < row
+			while y < col
+				if y == 0
+					res << [matrix[x][y] - matrixb[x][y]]
+				else
+					res[x] << matrix[x][y] - matrixb[x][y]
+				end
+				y= y+1			
+			end
+			x=x+1
+			y=0
+		end
+		DenseMatrix.new(res)
+	end
 	#definicion del metodo multiplicar
 	def *(matrixc)
 
@@ -121,5 +138,21 @@ class DenseMatrix < Matrix
 	end
 	def [](i)
 		self.matrix[i]
+	end
+
+	def min
+		
+		minimo = 1000000
+		i = 0														
+		(self.row).times do
+			j = 0				
+			(self.col).times do
+					minimo = @matrix[i][j] if(self[i][j] < min)	
+				j += 1	
+			end
+			i += 1	
+		end
+		return minimo
+		
 	end
 end
