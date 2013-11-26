@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DenseMatrix - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/dense_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Matrix.html">Matrix</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-mapmap">::mapmap</a>
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-c-read_File">::read_File</a>
+    
+    <li ><a href="#method-c-to_m">::to_m</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-3D-3D">#==</a>
+    
+    <li ><a href="#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="#method-i-min">#min</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/datos.html">datos</a>
+  
+    <li class="file"><a href="./lib/dense_matrix_rb~.html">dense_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/dense_matriz_rb~.html">dense_matriz.rb~</a>
+  
+    <li class="file"><a href="./lib/matrix_rb~.html">matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/sparse_matrix_rb~.html">sparse_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/sparse_vector_rb~.html">sparse_vector.rb~</a>
+  
+    <li class="file"><a href="./pract09_gemspec.html">pract09.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DenseMatrix.html">DenseMatrix</a>
+  
+    <li><a href="./Matrix.html">Matrix</a>
+  
+    <li><a href="./Pract09.html">Pract09</a>
+  
+    <li><a href="./SparseMatrix.html">SparseMatrix</a>
+  
+    <li><a href="./SparseVector.html">SparseVector</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DenseMatrix</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-matrix" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">matrix</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Asignación del método get para :matrix</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-mapmap" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mapmap</span><span
+            class="method-args">(a) { |e| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método usado para recorrer los elementos y convertir a flotante.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mapmap-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">mapmap</span>(<span class="ruby-identifier">a</span>)
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">e</span> }}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mapmap-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mapmap-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(newmatrix)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Constructor de la clase <a href="DenseMatrix.html">DenseMatrix</a>. Hereda
+de la clase <a href="Matrix.html">Matrix</a></p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Matrix.html#method-c-new">Matrix.new</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">newmatrix</span>)
+        <span class="ruby-ivar">@matrix</span> = <span class="ruby-identifier">newmatrix</span>
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">newmatrix</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">size</span>, <span class="ruby-identifier">newmatrix</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-c-read_File" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_File</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método para leer una matriz de un fichero Se usa el método .to_m para
+convertir los datos leidos en una matriz de números flotantes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read_File-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">read_File</span>(<span class="ruby-identifier">file</span>)
+        <span class="ruby-identifier">contenido</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>).<span class="ruby-identifier">read</span>
+        <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span> = <span class="ruby-identifier">contenido</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n\n+/</span>)
+        <span class="ruby-identifier">a</span> = <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">to_m</span>(<span class="ruby-identifier">a</span>)
+        <span class="ruby-identifier">b</span> = <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">to_m</span>(<span class="ruby-identifier">b</span>)
+        [<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- read_File-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- read_File-method -->
+
+    
+      <div id="method-c-to_m" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_m</span><span
+            class="method-args">(a)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método usado por el constructor para generar un array de arrays a partir de
+los datos leidos del fichero para construir las matrices con valores
+flotantes. Usa el método mapmap para recorrer los elementos y retornar los
+flotantes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_m-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">to_m</span>(<span class="ruby-identifier">a</span>)
+       <span class="ruby-identifier">a</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>)
+       <span class="ruby-identifier">a</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s+/</span>) }
+       <span class="ruby-identifier">a</span> = <span class="ruby-identifier">mapmap</span>(<span class="ruby-identifier">a</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_f</span> } 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_m-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_m-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(matrixc)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método * (multiplicación), para la realización de
+operaciones de multiplicación de matrices.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">matrixc</span>)
+<span class="ruby-identifier">matRes</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>,<span class="ruby-value">0</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">fil</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matrix</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">size</span>
+
+                <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">size</span>,<span class="ruby-value">0</span>)
+
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">size</span>
+
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">pos</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">size</span>
+
+                                <span class="ruby-identifier">prod</span> = <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">fil</span>][<span class="ruby-identifier">pos</span>] <span class="ruby-operator">*</span> <span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">pos</span>][<span class="ruby-identifier">col</span>]
+                                <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>][<span class="ruby-identifier">col</span>] = <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>][<span class="ruby-identifier">col</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">prod</span>
+
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span>
+<span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matRes</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(matrixb)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método + (suma), para la realización de operaciones de
+suma de matrices.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">matrixb</span>)
+        <span class="ruby-identifier">sum</span> = []
+        <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> =<span class="ruby-value">0</span>,<span class="ruby-value">0</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">col</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                                <span class="ruby-identifier">sum</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">matrixb</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>]]
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">sum</span>[<span class="ruby-identifier">x</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">matrixb</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>]
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">y</span>= <span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>                      
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">x</span>=<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+                <span class="ruby-identifier">y</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sum</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(matrixb)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementación del método - (resta), para la realización de operaciones de
+resta de matrices.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">matrixb</span>)
+        <span class="ruby-identifier">res</span> = []
+        <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> =<span class="ruby-value">0</span>,<span class="ruby-value">0</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">col</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                                <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">matrixb</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>]]
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">res</span>[<span class="ruby-identifier">x</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">matrixb</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>]
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">y</span>= <span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>                      
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">x</span>=<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+                <span class="ruby-identifier">y</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">res</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">==</span><span
+            class="method-args">(matrixd)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método == (comparación), para la realización de
+operaciones de comparación entre matrices.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">matrixd</span>)
+        <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> = <span class="ruby-value">0</span>,<span class="ruby-value">0</span>
+        <span class="ruby-identifier">flag</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">col</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">matrixd</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>] <span class="ruby-keyword">then</span> 
+                                <span class="ruby-identifier">flag</span> = <span class="ruby-keyword">true</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>                   
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">x</span>  =  <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-identifier">y</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">flag</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-method -->
+
+    
+      <div id="method-i-5B-5D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(i)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método [](i), (indexación), para tener acceso a los
+elementos por indice.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="5B-5D-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">i</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 5B-5D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 5B-5D-method -->
+
+    
+      <div id="method-i-min" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">min</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="min-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
+        <span class="ruby-identifier">minimo</span> = <span class="ruby-value">10000</span>
+        <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>                                                                                                         
+        (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">row</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>                                
+                (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">col</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">minimo</span> = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">min</span>)        
+                        <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>      
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>       
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">minimo</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- min-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- min-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método que retorna la representación en string de una matriz.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/dense_matrix.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> = <span class="ruby-value">0</span>,<span class="ruby-value">0</span>
+        <span class="ruby-identifier">str</span> = <span class="ruby-string">&quot;[&quot;</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span>
+                <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;[&quot;</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">col</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">!=</span><span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+                                <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;, &quot;</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{matrix[x][y]}&quot;</span>
+                        <span class="ruby-identifier">y</span>= <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>                    
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">x</span>  =  <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-identifier">y</span> = <span class="ruby-value">0</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;], &quot;</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;]&quot;</span>                                                  
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>   
+        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;]&quot;</span>
+        <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

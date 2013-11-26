@@ -1,0 +1,23 @@
+Tue, 26 Nov 2013 23:33:30 +0000
+./Gemfile	Thu, 21 Nov 2013 22:01:34 +0000
+./Rakefile	Thu, 21 Nov 2013 22:01:34 +0000
+./bin/pract09	Mon, 11 Nov 2013 20:54:16 +0000
+./README.md	Tue, 26 Nov 2013 15:55:41 +0000
+./LICENSE.txt	Mon, 11 Nov 2013 20:54:03 +0000
+./lib/sparse_vector.rb	Sun, 24 Nov 2013 19:13:21 +0000
+./lib/matrix.rb	Tue, 26 Nov 2013 23:33:22 +0000
+./lib/sparse_matrix.rb	Tue, 26 Nov 2013 23:32:15 +0000
+./lib/matrix.rb~	Tue, 26 Nov 2013 23:32:15 +0000
+./lib/datos	Tue, 26 Nov 2013 15:55:41 +0000
+./lib/sparse_matrix.rb~	Tue, 26 Nov 2013 23:32:03 +0000
+./lib/dense_matrix.rb	Tue, 26 Nov 2013 23:32:51 +0000
+./lib/dense_matrix.rb~	Tue, 26 Nov 2013 23:32:15 +0000
+./lib/dense_matriz.rb~	Thu, 21 Nov 2013 22:01:20 +0000
+./lib/pract09/version.rb	Mon, 11 Nov 2013 20:54:03 +0000
+./lib/pract09.rb	Mon, 11 Nov 2013 20:54:03 +0000
+./lib/sparse_vector.rb~	Sun, 24 Nov 2013 19:11:30 +0000
+./spec/matrix_spec.rb	Tue, 26 Nov 2013 23:32:15 +0000
+./spec/matrix_spec.rb~	Tue, 26 Nov 2013 15:55:41 +0000
+./Guardfile	Thu, 21 Nov 2013 22:01:34 +0000
+./pract09.gemspec	Fri, 22 Nov 2013 10:38:57 +0000
+./doc/created.rid	Tue, 26 Nov 2013 23:33:30 +0000

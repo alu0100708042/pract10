@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class SparseMatrix - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/sparse_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Matrix.html">Matrix</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="#method-i-coerce">#coerce</a>
+    
+    <li ><a href="#method-i-cols">#cols</a>
+    
+    <li ><a href="#method-i-max">#max</a>
+    
+    <li ><a href="#method-i-min">#min</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/datos.html">datos</a>
+  
+    <li class="file"><a href="./lib/dense_matrix_rb~.html">dense_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/dense_matriz_rb~.html">dense_matriz.rb~</a>
+  
+    <li class="file"><a href="./lib/matrix_rb~.html">matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/sparse_matrix_rb~.html">sparse_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/sparse_vector_rb~.html">sparse_vector.rb~</a>
+  
+    <li class="file"><a href="./pract09_gemspec.html">pract09.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DenseMatrix.html">DenseMatrix</a>
+  
+    <li><a href="./Matrix.html">Matrix</a>
+  
+    <li><a href="./Pract09.html">Pract09</a>
+  
+    <li><a href="./SparseMatrix.html">SparseMatrix</a>
+  
+    <li><a href="./SparseVector.html">SparseVector</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class SparseMatrix</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-m_Matrix" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">m_Matrix</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Asignación del método get para :m_Matrix</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(h = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Contructor de la clase <a href="SparseMatrix.html">SparseMatrix</a>. Hereda
+de la clase <a href="Matrix.html">Matrix</a>. Recibe de forma opcional un
+hash</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Matrix.html#method-c-new">Matrix.new</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">h</span> = {})
+        <span class="ruby-ivar">@m_Matrix</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>({})
+        <span class="ruby-identifier">row</span>, <span class="ruby-identifier">col</span> = <span class="ruby-value">0</span>, <span class="ruby-value">0</span>
+        <span class="ruby-identifier">arrayCol</span>=[]
+        <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">k</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">h</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">row</span> = <span class="ruby-identifier">k</span>  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)   
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">SparseVector</span>
+                        <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>]
+                <span class="ruby-keyword">else</span> 
+                        <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">SparseVector</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>])
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">j</span>= <span class="ruby-value">0</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span>  <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">do</span> 
+                         <span class="ruby-identifier">col</span>= <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> (<span class="ruby-identifier">col</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span>[<span class="ruby-identifier">j</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)
+                         <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>             
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">row</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">col</span> = <span class="ruby-identifier">col</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> 
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">row</span>,<span class="ruby-identifier">col</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(matrixc)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método * (multiplicación), para la realización de
+operaciones de multiplicación de matrices dispersas</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 73</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">matrixc</span>)
+            <span class="ruby-identifier">matRes</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>,<span class="ruby-value">0</span>)
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">row</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">row</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">col</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">col</span>) <span class="ruby-keyword">then</span>
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">fil</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">row</span>
+                        <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">col</span>,<span class="ruby-value">0</span>)                               
+                                <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">row</span> <span class="ruby-keyword">do</span>
+                                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">pos</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">col</span>
+                
+                <span class="ruby-comment">#     for fil in 0...matrixc.row</span>
+                        <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fil</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">col</span>,<span class="ruby-value">0</span>)
+                                <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">row</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)<span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">col</span><span class="ruby-operator">|</span>                          
+                                <span class="ruby-comment">#for col in 0... self.row do</span>
+                                        <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">matrixc</span>.<span class="ruby-identifier">col</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)<span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pos</span><span class="ruby-operator">|</span>
+                                        <span class="ruby-comment">#for pos in 0...matrixc.col</span>
+
+                                                <span class="ruby-identifier">prod</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">fil</span>][<span class="ruby-identifier">pos</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">matrixc</span>[<span class="ruby-identifier">pos</span>][<span class="ruby-identifier">col</span>].<span class="ruby-identifier">to_i</span>
+                                                <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>][<span class="ruby-identifier">col</span>] = <span class="ruby-identifier">matRes</span>[<span class="ruby-identifier">fil</span>][<span class="ruby-identifier">col</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">prod</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">matRes</span>)               
+                <span class="ruby-keyword">else</span> 
+                        <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;La matriz no es cuadrada no se puede multiplicar&quot;</span> 
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+        <span class="ruby-comment"># Método para hallar el minimo de la matriz.</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>()
+                <span class="ruby-identifier">min</span> = <span class="ruby-value">1000000</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                                <span class="ruby-identifier">min</span> = <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> (<span class="ruby-identifier">min</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)      
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        
+                <span class="ruby-identifier">min</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Método para hallar el máximo de la matriz.</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>()
+                <span class="ruby-identifier">max</span> = <span class="ruby-value">-1000000</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                                <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> (<span class="ruby-identifier">max</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)              
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">max</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Método que retorna la representación en string de una matriz.</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+                <span class="ruby-identifier">str</span> = <span class="ruby-string">&quot;[&quot;</span>     
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                                <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span>      <span class="ruby-node">&quot;[#{r}] [#{@m_Matrix[r].vector.to_s}]&quot;</span>       
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>   
+                <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;]&quot;</span>    
+        <span class="ruby-keyword">end</span>
+    
+        <span class="ruby-comment"># Implementación del método coerse para poder realizar operaciones con otros tipos de matrices.</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
+                <span class="ruby-keyword">return</span>  [<span class="ruby-keyword">self</span>,<span class="ruby-identifier">other</span>]
+    <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Implementacón del método [](i), (indexación), para tener acceso a los elementos por indice.</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">i</span>)
+                <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">i</span>]
+        <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span>
+</pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(matrizb)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método + (suma), para la realización de operaciones de
+suma de matrices dispersas.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">matrizb</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                        <span class="ruby-identifier">matrizb</span>[<span class="ruby-identifier">r</span>][<span class="ruby-identifier">j</span>]= <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>][<span class="ruby-identifier">j</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">matrizb</span>[<span class="ruby-identifier">r</span>][<span class="ruby-identifier">j</span>].<span class="ruby-identifier">to_i</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>   
+        <span class="ruby-identifier">matrizb</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(matrizb)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método - (resta), para la realización de operaciones de
+resta de matrices dispersas.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">matrizb</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>                                 
+                        <span class="ruby-identifier">matrizb</span>[<span class="ruby-identifier">r</span>][<span class="ruby-identifier">j</span>]= <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">matrizb</span>[<span class="ruby-identifier">r</span>][<span class="ruby-identifier">j</span>]
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">matrizb</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-5B-5D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(i)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementacón del método [](i), (indexación), para tener acceso a los
+elementos por indice.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="5B-5D-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">i</span>)
+        <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">i</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 5B-5D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 5B-5D-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implementación del método coerse para poder realizar operaciones con otros
+tipos de matrices.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
+            <span class="ruby-keyword">return</span>  [<span class="ruby-keyword">self</span>,<span class="ruby-identifier">other</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-cols" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cols</span><span
+            class="method-args">(j)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método que retorna un objeto <a href="SparseVector.html">SparseVector</a>
+que representa los valores de una columna en una matriz dispersa.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cols-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cols</span>(<span class="ruby-identifier">j</span>)
+        <span class="ruby-identifier">c</span> = {}
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>   
+                <span class="ruby-identifier">c</span>[<span class="ruby-identifier">r</span>] = <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">j</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">SparseVector</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cols-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cols-method -->
+
+    
+      <div id="method-i-max" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">max</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método para hallar el máximo de la matriz.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="max-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>()
+        <span class="ruby-identifier">max</span> = <span class="ruby-value">-1000000</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                        <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> (<span class="ruby-identifier">max</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)              
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- max-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- max-method -->
+
+    
+      <div id="method-i-min" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">min</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método para hallar el minimo de la matriz.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="min-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>()
+        <span class="ruby-identifier">min</span> = <span class="ruby-value">1000000</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                        <span class="ruby-identifier">min</span> = <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> (<span class="ruby-identifier">min</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>[<span class="ruby-identifier">j</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)      
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- min-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- min-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Método que retorna la representación en string de una matriz.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">str</span> = <span class="ruby-string">&quot;[&quot;</span>     
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@m_Matrix</span>[<span class="ruby-identifier">r</span>].<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword">do</span> 
+                        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span>      <span class="ruby-node">&quot;[#{r}] [#{@m_Matrix[r].vector.to_s}]&quot;</span>       
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>   
+        <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;]&quot;</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

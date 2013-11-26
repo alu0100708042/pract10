@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>README - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-Pr%C3%A1ctica+10+-+Implementaci%C3%B3n+de+operaciones+entre+matrices+densas+y+dispersas+para+la+Gema+SparseMatrix.">Práctica 10 - Implementación de operaciones entre matrices densas y dispersas para la Gema SparseMatrix.</a>
+      <li><a href="#label-Descripci%C3%B3n">Descripción</a>
+      <li><a href="#label-Instalaci%C3%B3n">Instalación</a>
+      <li><a href="#label-Uso">Uso</a>
+      <li><a href="#label-Contribucciones">Contribucciones</a>
+    </ul>
+  </nav>
+</div>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/datos.html">datos</a>
+  
+    <li class="file"><a href="./lib/dense_matrix_rb~.html">dense_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/dense_matriz_rb~.html">dense_matriz.rb~</a>
+  
+    <li class="file"><a href="./lib/matrix_rb~.html">matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/sparse_matrix_rb~.html">sparse_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/sparse_vector_rb~.html">sparse_vector.rb~</a>
+  
+    <li class="file"><a href="./pract09_gemspec.html">pract09.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DenseMatrix.html">DenseMatrix</a>
+  
+    <li><a href="./Matrix.html">Matrix</a>
+  
+    <li><a href="./Pract09.html">Pract09</a>
+  
+    <li><a href="./SparseMatrix.html">SparseMatrix</a>
+  
+    <li><a href="./SparseVector.html">SparseVector</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<h1 id="label-Pr%C3%A1ctica+10+-+Implementaci%C3%B3n+de+operaciones+entre+matrices+densas+y+dispersas+para+la+Gema+SparseMatrix.">Práctica 10 - Implementación de operaciones entre matrices densas y dispersas para la Gema <a href="SparseMatrix.html">SparseMatrix</a>.<span><a href="#label-Pr%C3%A1ctica+10+-+Implementaci%C3%B3n+de+operaciones+entre+matrices+densas+y+dispersas+para+la+Gema+SparseMatrix.">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<h2 id="label-Descripci%C3%B3n">Descripción<span><a href="#label-Descripci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Gema que implementa la clase <a href="SparseMatrix.html">SparseMatrix</a>
+que contempla el formato de matriz con más de un 60% de ceros. En ella se
+describen métodos para la realización de operaciones aritméticas, y métodos
+de comparación. Esos métodos son +(other), -(other), *(other), ==(other),
+to_s, initialize(h={}).</p>
+
+<p>La clase <a href="SparseMatrix.html">SparseMatrix</a> hereda de la clase <a
+href="Matrix.html">Matrix</a>, al igual que lo hace DenseMatriz en la cual
+se implementan las operaciones entre matrices. Esta clase está pensada para
+su uso con matrices densas. En la clase <a
+href="SparseMatrix.html">SparseMatrix</a> tambien se implementan los
+metodos para hacer operaciones con hashes que van a representar a vectores
+y martrices dispersas.</p>
+
+<p>La jerarquía de clases será la que sigue: <a href="Matrix.html">Matrix</a>
+clase base. <a href="DenseMatrix.html">DenseMatrix</a>, clase que hereda de
+<a href="Matrix.html">Matrix</a>. <a
+href="SparseMatrix.html">SparseMatrix</a>, clase que hereda de <a
+href="Matrix.html">Matrix</a>. <a
+href="SparseVector.html">SparseVector</a>, clase que es usada por <a
+href="SparseMatrix.html">SparseMatrix</a> para crear hashes.</p>
+
+<h2 id="label-Instalaci%C3%B3n">Instalación<span><a href="#label-Instalaci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Añadir esta línea a el <a href="Gemfile.html">Gemfile</a> de la aplicación:</p>
+
+<pre>gem &#39;SparseMatrix&#39;</pre>
+
+<p>Y entonces ejecuta:</p>
+
+<pre>$ bundle</pre>
+
+<p>O instala tu mismo la gema:</p>
+
+<pre>$ gem install SparseMatrix</pre>
+
+<h2 id="label-Uso">Uso<span><a href="#label-Uso">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Para instanciar la clase llamaremos a su constructor al cual podemos
+pasarle, de forma opcional, un hash.</p>
+
+<pre class="ruby">    <span class="ruby-identifier">z</span> = <span class="ruby-constant">SparseMatrix</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">1000</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">100</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">500</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">200</span>}, <span class="ruby-value">20000</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">1000</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-value">9000</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">200</span>}
+</pre>
+
+<p>Para comprobar su funcionamiento se podría hacer lo siguiente:</p>
+
+<p>1.Devolverá el valor que tendría asociado en una matriz la fila 1000 y
+columna 500.</p>
+
+<pre>    puts &quot;z[1000][500] = #{z[1000][500]}&quot;</pre>
+
+<p>2.Devolverá todos los valores que tendría la columna 500 en una matriz.</p>
+
+<pre>    puts &quot;z.col(500) = #{z.col(500)}&quot;</pre>
+
+<h2 id="label-Contribucciones">Contribucciones<span><a href="#label-Contribucciones">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>1.Colaboraciones.</p>
+
+<p>2.Crear una rama</p>
+
+<pre>    $ git checkout -b miRama</pre>
+
+<p>3.Hacer un commit con los cambios realizados</p>
+
+<pre>    $ git commit -a -m &#39;Mensaje descriptivo&#39;</pre>
+
+<p>4.Empujar los cambios al repositorio</p>
+
+<pre>    $ git push -u origin miRama</pre>
+
+<p>5.Actualizar nuestro repositorio local</p>
+
+<pre>    $ git pull origin miRama</pre>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
