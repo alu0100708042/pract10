@@ -13,7 +13,7 @@ describe Matrix do
 	end
 	
 	it "Comprobar la salida del metodo to_s en matrices dispersas" do
-		@sm_a.to_s.should == "[[10] [{2=>1, 5=>200}][10] [{2=>1, 5=>200}][20] [{10=>3, 9=>5}][20] [{10=>3, 9=>5}]]"
+		@sm_a.to_s.should == "[[10] [{2=>1, 5=>200}][10] [{2=>1, 5=>200}][20] [{10=>3, 9=>5}][20] [{10=>3, 9=>5}]]"	
 	end
 	
 	it "Comprobar la salida del metodo col en matrices dispersas" do

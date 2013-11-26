@@ -28,7 +28,7 @@ describe Matrix do
 		(@sm_b-@sm_a).to_s.should == "[[10] [{5=>100}][20] [{9=>2}]]" 
 	end
 	it "Comprobar la multiplicacion de dos matrices dispersas" do
-		(@sm_b*@sm_a).to_s.should == "[[10] [{5=>100}][20] [{9=>2}]]" 
+		(@sm_b*@sm_a).to_s.should == "[10, {2=>2}, 10, {5=>60000}, 20, {10=>15}, 20, {9=>35}]"
 	end
 	it "Comprobar el metodo min entre matrices dispersas" do
 		@sm_a.min(@sm_b).should == 1
