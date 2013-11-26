@@ -13,8 +13,8 @@ class DenseMatrix < Matrix
 	def DenseMatrix.read_File(file)
 		contenido = File.open(file).read
 		a, b = contenido.split(/\n\n+/)
-		a = Matrix.to_m(a)
-		b = Matrix.to_m(b)
+		a = DenseMatrix.to_m(a)
+		b = DenseMatrix.to_m(b)
 		[a, b]
 	end
 	
