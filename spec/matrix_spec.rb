@@ -17,7 +17,11 @@ describe Matrix do
 		
 	end
 	
+	it "Comprobar la salida del metodo to_s en matrices dispersas" do
+		@sm_a.to_s.should == "[[10] [{2=>1, 5=>200}][10] [{2=>1, 5=>200}][20] [{10=>3, 9=>5}][20] [{10=>3, 9=>5}]]"	
+	end
 	context 'Operaciones con matrices densas' do
+
 	
 		it "Comprobar el metodo de Multiplicar" do							
 			(@m_MatrizA*@m_MatrizB).to_s.should == "[[15.0, 41.0, 39.0], [45.0, 95.0, 90.0], [75.0, 149.0, 141.0]]"

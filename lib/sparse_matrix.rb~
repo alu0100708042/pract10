@@ -84,10 +84,13 @@ class SparseMatrix < Matrix
 	    	matRes = Array.new(matrixc.row - 1,0)
 		if (matrixc.row == self.row && matrixc.col == self.col) then
 				
-			for fil in 0...matrixc.row
-			matRes[fil] = Array.new(matrixc.col,0)				
-				for col in 0... self.row do
-					for pos in 0...matrixc.col
+		#	for fil in 0...matrixc.row
+			0.upto(matrixc.row - 1) do |fil|
+			matRes[fil] = Array.new(matrixc.col,0)
+				0.upto(self.row-1)do |col|				
+				#for col in 0... self.row do
+					0.upto(matrixc.col-1)do |pos|
+					#for pos in 0...matrixc.col
 						prod = self[fil][pos].to_i * matrixc[pos][col].to_i
 						matRes[fil][col] = matRes[fil][col].to_i + prod
 					end
@@ -100,18 +103,18 @@ class SparseMatrix < Matrix
 	    	end
     end
     # Se define un metodo para hallar el máximo que retornará un número
-	def min(other)
+	def min()
 		min = 1000000
-		for r in @m_Matrix.keys do
-			for j in @m_Matrix[r].vector.keys do 
-				min = @m_Matrix[r].vector[j] if (min > @m_Matrix[r].vector[j] == true)	
+		#for r in @m_Matrix.keys do
+		#	for j in @m_Matrix[r].vector.keys do 
+		(@row).times do
+			r = 0					
+			(@col).times do			
+				j=0
+				min = @m_Matrix[r][j] if (min > @m_Matrix[r][j] == true)	
 			end
 		end
-		for r in other.m_Matrix.keys do
-			for j in other.m_Matrix[r].vector.keys do 
-				min = other.m_Matrix[r].vector[j] if (min > other.m_Matrix[r].vector[j] == true)	
-			end
-		end
+	
 		min
 	end
    
