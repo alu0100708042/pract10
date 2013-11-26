@@ -20,20 +20,20 @@ describe Matrix do
 	
 	context 'Operaciones con matrices densas' do
 	
-		it "Comprobar el método de Multiplicar" do							
-			@m_MatrizA.multiplicar(@m_MatrizB).to_s.should == "[[15.0, 41.0, 39.0], [45.0, 95.0, 90.0], [75.0, 149.0, 141.0]]"
+		it "Comprobar el metodo de Multiplicar" do							
+			(@m_MatrizA*@m_MatrizB).to_s.should == "[[15.0, 41.0, 39.0], [45.0, 95.0, 90.0], [75.0, 149.0, 141.0]]"
 		end
 
-		it "Comprobar el método de Sumar" do							
-			@m_MatrizA.sumar(@m_MatrizB).to_s.should == "[[8.0, 6.0, 6.0], [5.0, 10.0, 12.0], [9.0, 17.0, 17.0]]"
+		it "Comprobar el metodo de Sumar" do							
+			(@m_MatrizA+@m_MatrizB).to_s.should == "[[8.0, 6.0, 6.0], [5.0, 10.0, 12.0], [9.0, 17.0, 17.0]]"
 		end
 		
-		it "Comprobar el método ==" do
+		it "Comprobar el metodo ==" do
 			(@m_MatrizA==@m_MatrizC).should == true
 		end
 		
-		it "Comprobar el método de Restar" do
-			(@m_MatrizA-@m_MatrizB).should == "[[-5.0, -2.0, 0.0], [3.0, -2.0, 4.0], [5.0, 1.0, 7.0]]"
+		it "Comprobar el metodo de Restar" do
+			(@m_MatrizB-@m_MatrizA).to_s.should == "[[6.0, 2.0, 0.0], [-3.0, 0.0, 0.0], [-5.0, 1.0, -1.0]]"
 		end
 		
 	end
@@ -45,11 +45,11 @@ describe Matrix do
 		end
 		
 		it "Comprobar la salida del metodo col en matrices dispersas" do
-			@sm_b.cols(2).to_s.should ==  "{2=>6}"
+			@sm_a.cols(2).to_s.should ==  "{2=>6}"
 		end
 		
 		it "Comprobar la suma de dos matrices dispersas" do
-			(@sm_a+@sm_b).to_s.should ==  "[[1] [{1=>-2, 2=>12}][1] [{1=>-2, 2=>12}][2] [{1=>10, 2=>12}][2] [{1=>10, 2=>12}]]"
+			(@sm_a+@sm_b).to_s.should == "[[1] [{1=>6, 2=>4}][1] [{1=>6, 2=>4}][2] [{1=>10, 2=>6}][2] [{1=>10, 2=>6}]]"
 		end
 		
 		it "Comprobar la resta de dos matrices dispersas" do
@@ -57,15 +57,15 @@ describe Matrix do
 		end
 		
 		it "Comprobar la multiplicacion de dos matrices dispersas" do
-			(@sm_a*@sm_b).to_s.should ==  "[[2, 0, 0], [0, 44, 24], [0, 56, 96]]"
+			(@sm_a*@sm_b).to_s.should ==  "[[0, 0, 0], [0, 8, 16], [0, 44, 16]]"
 		end
 		
 		it "Comprobar el metodo min entre matrices dispersas" do
-			@sm_a.min(@sm_b).should == 1
+			@sm_a.min().should == 1
 		end
 		
 		it "Comprobar el metodo max entre matrices dispersas" do
-			@sm_a.max(@sm_b).should == 6
+			@sm_a.max().should == 6
 		end
 		
 	end
@@ -73,11 +73,11 @@ describe Matrix do
 	context 'Operaciones con matrices densas y dispersas' do
 		
 		it "Comprobar la multiplicacion" do
-			(@sm_a * @m_MatrizA).to_s.should == "[[1, 2, 3], [20, 22, 24], [50, 58, 66]]"
+			(@sm_a * @m_MatrizA).to_s.should == "[[1, 2, 3], [16, 20, 24], [58, 68, 78]]"
 		end
 		
 		it "Comprobar la suma" do
-			(@sm_a + @m_MatrizA).to_s.should == "[[2, 2.0, 3.0], [4.0, 3, 10], [7.0, 10, 15]]"
+			(@sm_a + @m_MatrizA).to_s.should ==  "[[2, 2.0, 3.0], [4.0, 9, 6.0], [7.0, 12, 15]]"
 		end
 	
 	end	
