@@ -50,23 +50,9 @@ class SparseMatrix < Matrix
 	# Metodo para la operacion aritmetica de la suma.
 	def +(matrizb)
 		
-		#sumita={}
-		#for r in @m_Matrix.keys do 
-		#	sum = {}
-		#	if matrizb.m_Matrix.keys.include? r
-		#		for j in @m_Matrix[r].vector.keys do 
-		#			sum[j] = @m_Matrix[r].vector[j]+matrizb[r].vector[j]	
-		#			sumita[r] = {j=>sum[j]}
-		#		end
-		#	else
-		#		sum[r]=@m_Matrix[r]
-		#	end
-		#end
-		#SparseMatrix.new(sumita)
-
 		for r in @m_Matrix.keys do 
 			for j in @m_Matrix[r].vector.keys do 
-				matrizb[r][j]= @m_Matrix[r][j]+matrizb[r][j]
+				matrizb[r][j]= @m_Matrix[r][j].to_i + matrizb[r][j].to_i
 			end
 		end	
 	matrizb
@@ -74,39 +60,23 @@ class SparseMatrix < Matrix
 
 	# Metodo para la operacion aritmetica de la resta.
 	def -(matrizb)
-		#restita={}
-		#for r in @m_Matrix.keys do 
-		#	res = {}
-		#	if matrizb.m_Matrix.keys.include? r
-		#		for j in @m_Matrix[r].vector.keys do 
-		#			res[j] = @m_Matrix[r].vector[j]-matrizb[r].vector[j]	
-		#			restita[r] = {j=>res[j]}
-		#		end
-		#	else
-		#		res[r]=@m_Matrix[r]
-		#	end
-		#end
-		#SparseMatrix.new(restita)
 		for r in @m_Matrix.keys do 
-			for j in @m_Matrix[r].vector.keys do 
-				matrizb[r][j]= @m_Matrix[r][j]-matrizb[r][j]
+			for j in @m_Matrix[r].vector.keys do 				
+				matrizb[r][j]= @m_Matrix[r][j] - matrizb[r][j]
 			end
 		end
+	matrizb
 	end
 		
 	# Se define un metodo para hallar el máximo que retornará un número
-	def max(other)
+	def max()
 		max = -1000000
 		for r in @m_Matrix.keys do
 			for j in @m_Matrix[r].vector.keys do 
 				max = @m_Matrix[r].vector[j] if (max < @m_Matrix[r].vector[j] == true)		
 			end
 		end
-		for r in other.m_Matrix.keys do
-			for j in other.m_Matrix[r].vector.keys do 
-				max = other.m_Matrix[r].vector[j] if (max < other.m_Matrix[r].vector[j] == true)	
-			end
-		end
+
 		max
 	end
 	
@@ -126,7 +96,7 @@ class SparseMatrix < Matrix
 			return DenseMatrix.new(matRes)		
 
 		else 
-			puts "La matriz no es cuadrada no se puede multiplicar" 
+			raise "La matriz no es cuadrada no se puede multiplicar" 
 	    	end
     end
     # Se define un metodo para hallar el máximo que retornará un número
@@ -156,8 +126,8 @@ class SparseMatrix < Matrix
 		str << "]"	
 	end
     
-	def coerce(other)
-		return  [self,other]
+    def coerce(other)
+	return  [self,other]
     end
  	
 end

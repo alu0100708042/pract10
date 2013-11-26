@@ -52,7 +52,7 @@ class SparseMatrix < Matrix
 		
 		for r in @m_Matrix.keys do 
 			for j in @m_Matrix[r].vector.keys do 
-				matrizb[r][j]= @m_Matrix[r][j]+matrizb[r][j]
+				matrizb[r][j]= @m_Matrix[r][j].to_i + matrizb[r][j].to_i
 			end
 		end	
 	matrizb
@@ -61,25 +61,22 @@ class SparseMatrix < Matrix
 	# Metodo para la operacion aritmetica de la resta.
 	def -(matrizb)
 		for r in @m_Matrix.keys do 
-			for j in @m_Matrix[r].vector.keys do 
-				matrizb[r][j]= @m_Matrix[r][j]-matrizb[r][j]
+			for j in @m_Matrix[r].vector.keys do 				
+				matrizb[r][j]= @m_Matrix[r][j] - matrizb[r][j]
 			end
 		end
+	matrizb
 	end
 		
 	# Se define un metodo para hallar el máximo que retornará un número
-	def max(other)
+	def max()
 		max = -1000000
 		for r in @m_Matrix.keys do
 			for j in @m_Matrix[r].vector.keys do 
 				max = @m_Matrix[r].vector[j] if (max < @m_Matrix[r].vector[j] == true)		
 			end
 		end
-		for r in other.m_Matrix.keys do
-			for j in other.m_Matrix[r].vector.keys do 
-				max = other.m_Matrix[r].vector[j] if (max < other.m_Matrix[r].vector[j] == true)	
-			end
-		end
+
 		max
 	end
 	
@@ -99,22 +96,18 @@ class SparseMatrix < Matrix
 			return DenseMatrix.new(matRes)		
 
 		else 
-			puts "La matriz no es cuadrada no se puede multiplicar" 
+			raise "La matriz no es cuadrada no se puede multiplicar" 
 	    	end
     end
     # Se define un metodo para hallar el máximo que retornará un número
-	def min(other)
+	def min()
 		min = 1000000
 		for r in @m_Matrix.keys do
 			for j in @m_Matrix[r].vector.keys do 
 				min = @m_Matrix[r].vector[j] if (min > @m_Matrix[r].vector[j] == true)	
 			end
 		end
-		for r in other.m_Matrix.keys do
-			for j in other.m_Matrix[r].vector.keys do 
-				min = other.m_Matrix[r].vector[j] if (min > other.m_Matrix[r].vector[j] == true)	
-			end
-		end
+	
 		min
 	end
    
@@ -129,8 +122,8 @@ class SparseMatrix < Matrix
 		str << "]"	
 	end
     
-	def coerce(other)
-		return  [self,other]
+    def coerce(other)
+	return  [self,other]
     end
  	
 end

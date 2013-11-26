@@ -13,8 +13,8 @@ class DenseMatrix < Matrix
 	def DenseMatrix.read_File(file)
 		contenido = File.open(file).read
 		a, b = contenido.split(/\n\n+/)
-		a = Matrix.to_m(a)
-		b = Matrix.to_m(b)
+		a = DenseMatrix.to_m(a)
+		b = DenseMatrix.to_m(b)
 		[a, b]
 	end
 	
@@ -77,6 +77,23 @@ class DenseMatrix < Matrix
 		DenseMatrix.new(sum)
 	end
 	
+	def -(matrixb)
+		res = []
+		x,y =0,0
+		while x < row
+			while y < col
+				if y == 0
+					res << [matrix[x][y] - matrixb[x][y]]
+				else
+					res[x] << matrix[x][y] - matrixb[x][y]
+				end
+				y= y+1			
+			end
+			x=x+1
+			y=0
+		end
+		DenseMatrix.new(res)
+	end
 	#definicion del metodo multiplicar
 	def *(matrixc)
 
