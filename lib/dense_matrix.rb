@@ -59,7 +59,7 @@ class DenseMatrix < Matrix
 		DenseMatrix.new(sum)
 	end
 	
-	# Implementacón del método - (resta), para la realización de operaciones de resta de matrices.
+	# Implementación del método - (resta), para la realización de operaciones de resta de matrices.
 	def -(matrixb)
 		res = []
 		x,y =0,0
@@ -143,23 +143,29 @@ class DenseMatrix < Matrix
 		str
 	end
 	
-	# Implementacón del método [](i), (indexación), para tener acceso a los elementos por indice.
+	# Implementacón del método [](i), (indexación), para tener acceso a los elementos por indice.()
 	def [](i)
 		self.matrix[i]
 	end
 	
-	def min
-		minimo = 10000
-		i = 0														
-		(self.row).times do
-			j = 0				
-			(self.col).times do
-					minimo = @matrix[i][j] if(self[i][j] < min)	
-				j += 1	
-			end
-			i += 1	
-		end
+	def min()
+		#minimo = 10000
+		#i = 0														
+		#(self.row).times do
+		#	j = 0				
+		#	(self.col).times do
+		#			minimo = @matrix[i][j] if(self[i][j] < min)	
+		#		j += 1	
+		#	end
+		#	i += 1	
+		#end
+		cp = DenseMatrix.new(self.matrix)
+		cp.matrix.sort!
+		cp.matrix.map!{|x| x.sort}
+		minimo = cp.matrix.first.first
 		return minimo
 	end
-
+	def coerce(other)
+		[other,self]
+        end
 end

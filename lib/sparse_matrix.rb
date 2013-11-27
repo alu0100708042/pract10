@@ -73,12 +73,7 @@ class SparseMatrix < Matrix
 	def *(matrixc)
 	    matRes = Array.new(matrixc.row - 1,0)
 		if (matrixc.row == self.row && matrixc.col == self.col) then
-			for fil in 0...matrixc.row
-			matRes[fil] = Array.new(matrixc.col,0)				
-				for col in 0... self.row do
-					for pos in 0...matrixc.col
-		
-		#	for fil in 0...matrixc.row
+			#for fil in 0...matrixc.row
 			0.upto(matrixc.row - 1) do |fil|
 			matRes[fil] = Array.new(matrixc.col,0)
 				0.upto(self.row-1)do |col|				
